@@ -8,8 +8,8 @@ import Routes from './router';
 import '../style/materialize.css';
 import '../style/react-range.css';
 import '../style/style.css';
-console.log(1)
-console.log(2)
+
+console.log('you can do it');
 
 const App = () => {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
