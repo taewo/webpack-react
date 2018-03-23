@@ -9,6 +9,8 @@ import '../style/materialize.css';
 import '../style/react-range.css';
 import '../style/style.css';
 console.log(1)
+console.log(2)
+
 const App = () => {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
