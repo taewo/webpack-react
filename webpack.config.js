@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js' // entry의 key값들이 [name]으로 생성된다.
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -32,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
